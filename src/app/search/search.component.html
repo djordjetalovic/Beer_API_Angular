@@ -1,0 +1,33 @@
+<main class="container px-5 main">
+    <div
+      class="filter_table_div px-3 py-3 pt-md-4 pb-md-4 mx-auto text-center mb-2"
+    >
+      <h1 class="display-4">Search Beer API</h1>
+      <mat-form-field class="search-input mb-3">
+        <input
+          matInput
+          class=" search_table_input my-0 mx-auto mt-1"
+          type="text"
+          name="search"
+          placeholder="Search for a beer..."
+          #searchInput
+          [(ngModel)]="searchValue"
+        />
+        <button mat-button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="searchValue=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <div *ngIf="searchValue">
+          <a *ngFor="let beer of searchResults"
+            class="list-group-item list-group-item-action"
+            aria-current="true"
+            [routerLink]="['/beers', beer.id]">
+                 {{beer.name}}
+          </a>
+
+      </div>
+    </div>
+
+
+        
+  </main>

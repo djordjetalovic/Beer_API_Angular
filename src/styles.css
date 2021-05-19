@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.css';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ngx-datatable.material .datatable-header .datatable-header-cell {
+    font-size: 16px;
+}
+
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+    font-size: 16px;
+}
+
+.ngx-datatable.material .datatable-footer {
+    font-size: 14px;
+    
+}
+
+

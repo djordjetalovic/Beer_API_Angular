@@ -1,0 +1,4 @@
+.beer_table,
+  .beer_table tfoot span {
+    font-size: 1.2rem;
+  }

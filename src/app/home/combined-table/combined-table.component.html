@@ -1,0 +1,15 @@
+<div class="mb-2 pb-3 text-center small_beer_table_div">
+
+    <ngx-datatable
+    class="material"
+    [rows]="beerData"
+    [columns]="[{ name: 'Minimum ABV value', prop: 'min_abv_data' }, { name: 'Maximum Ph value', prop: 'max_ph_data' }, 
+    { name: 'Darkest beer hue (i.e. ebc)', prop: 'darkest_ebc' }, { name: 'Average fermentation temp. (in Celsius)', prop: 'avg_ferm_temp' }]"
+    [columnMode]="ColumnMode.force"
+    [headerHeight]="50"
+    rowHeight="auto"
+    >
+    </ngx-datatable>
+
+    
+  </div>

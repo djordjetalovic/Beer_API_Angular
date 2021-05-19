@@ -1,0 +1,78 @@
+<div class="container single_page_container">
+<div class="beer_img_basic_div d-flex pt-5 pb-4">
+    <div class="beer_img_div">
+      <img
+        src="{{beer$[0].image_url}}"
+        class="d-inline-block beer_img"
+        alt="Beer image"
+      />
+    </div>
+    <div class="beer_basic_data">
+      <h1 class="display-4 beer_basic_data_title">
+        <span class="title_span display-4">{{beer$[0].name}}</span>
+      </h1>
+      <p class="fst-italic lead">{{beer$[0].tagline}}</p>
+      <div class="beer_info_div pt-3 pb-1 my-3">
+        <h4 class="px-3 h4">General information</h4>
+        <div class="beer_info px-4 py-2">
+          <p><span class="d-inline-block fw-bold">ABV:</span> &nbsp;{{beer$[0].abv}}</p>
+          <p>
+            <span class="d-inline-block fw-bold">Attenuation level:</span>
+            &nbsp;{{beer$[0].attenuation_level}}
+          </p>
+          <p><span class="d-inline-block fw-bold">EBC:</span> &nbsp;{{beer$[0].ebc}}</p>
+          <p><span class="d-inline-block fw-bold">IBU:</span> &nbsp;{{beer$[0].ibu}}</p>
+          <p><span class="d-inline-block fw-bold">Ph:</span> &nbsp;{{beer$[0].ph}}</p>
+          <p>
+            <span class="d-inline-block fw-bold">Target og:</span> &nbsp;{{beer$[0].target_og}}
+          </p>
+          <p>
+            <span class="d-inline-block fw-bold">Target fg:</span> &nbsp;{{beer$[0].target_fg}}
+          </p>
+          <p>
+            <span class="d-inline-block fw-bold">Volume:</span> &nbsp;{{beer$[0].volume.value}} {{beer$[0].volume.unit}}
+          </p>
+          <p>
+            <span class="d-inline-block fw-bold">Boil volume:</span>
+            &nbsp;{{beer$[0].boil_volume.value}} {{beer$[0].boil_volume.unit}}
+          </p>
+          <p><span class="d-inline-block fw-bold">SRM:</span> &nbsp;{{beer$[0].srm}}</p>
+          <p>
+            <span class="d-inline-block fw-bold">First brewed:</span>
+            &nbsp;{{beer$[0].first_brewed}}
+          </p>
+          <p>
+            <span class="d-inline-block fw-bold">Contributed by:</span>
+            &nbsp;{{beer$[0].contributed_by}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="beer_description mx-auto d-flex my-4">
+     <div class="desc_heading">
+        <h4 class="h4">Description</h4>
+     </div>
+     <div class="desc_content">
+        <p>{{beer$[0].description}}</p>
+     </div>
+  </div>
+  <div class="beer_tips mx-auto d-flex my-4">
+     <div class="tips_heading">
+        <h4 class="h4">Brewers tips</h4>
+     </div>
+     <div class="tips_content">
+        <p>{{beer$[0].brewers_tips}}</p>
+     </div>
+  </div>
+  <div class="best_pair mx-auto d-flex mt-4 mb-5">
+     <div class="pair_heading">
+        <h4 class="h4">Best paired with</h4>
+     </div>
+     <div class="pair_content">
+        <ul>
+           <li *ngFor="let pair of beer$[0].food_pairing">{{pair}}</li>
+        </ul>
+     </div>
+  </div>
+</div>

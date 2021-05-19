@@ -1,0 +1,23 @@
+<div class="mb-2 pb-3 text-center beer_table_div">
+    
+
+    <ngx-datatable
+    class="material"
+    [rows]="rows | searchFilter:searchTerm"
+    [columns]="columns"
+    [columnMode]="ColumnMode.force"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [externalPaging]="true"
+    [count]="page.totalElements"
+    [offset]="page.pageNumber"
+    [limit]="page.size_per_page"
+    (page)="setPage($event)">
+
+    </ngx-datatable>
+
+    <ng-template #editTmpl let-row="row" let-value="value">
+      <img width="50" height="50" src="{{row.image_url}}" />
+    </ng-template>
+  </div>

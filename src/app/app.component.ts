@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavbarService } from './navbar.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Beer-API-Angular';
+  navLinks: {title:string, link:string}[];
+  
+  constructor(private navService: NavbarService) {
+    this.navLinks = navService.getNavLinks();
+    
+  }
+
 }

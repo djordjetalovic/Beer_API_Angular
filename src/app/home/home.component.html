@@ -1,0 +1,33 @@
+<main class="container px-5 main">
+    <div
+      class="filter_table_div px-3 py-3 pt-md-4 pb-md-4 mx-auto text-center mb-2"
+    >
+      <h1 class="display-4">Beer API</h1>
+      <mat-form-field class="search-input">
+        <input
+          matInput
+          class=" search_table_input my-0 mx-auto mt-1"
+          type="text"
+          name="search"
+          placeholder="Search for a beer..."
+          #searchInput
+          [(ngModel)]="searchValue"
+        />
+        <button mat-button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="searchValue=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    
+
+    <app-large-table [searchTerm]="searchValue"></app-large-table>
+
+    <app-combined-table [searchTerm]="searchValue"></app-combined-table>
+
+    <!-- <ngx-datatable [rows]="rows" [columns]="columns" rowheight="auto" class="dark"
+        [headerHeight]="50"
+        [footerHeight]="0"
+        selectionType="'single'"> </ngx-datatable> -->
+        
+  </main>
